@@ -1,0 +1,92 @@
+//
+// Base layout styles for jQuery's datepicker
+//
+.ui-datepicker {
+	position: absolute;
+	top: -9999px; // Hide the datepicker off-screen until it's requested
+	width: 16em;
+	max-width: 100%;
+
+	@media(min-width: 767px) {
+		width: 25em;
+	}
+
+	// Can be select dropdowns or just text
+	.ui-datepicker-month,
+	.ui-datepicker-year {
+		display: inline-block;
+		padding: 0.25em 0.5em;
+		margin-top: 0.5em;
+		margin-bottom: 0.5em;
+		margin-left: 0.1em;
+
+		&:focus {
+			padding-left: 0.5em;
+		}
+	}
+
+}
+
+.ui-datepicker-prev,
+.ui-datepicker-next {
+	display: block;
+	position: absolute;
+	top: 0.75em;
+	left: 0.75em;
+	width: 2em;
+	height: 2em;
+	text-align: center;
+	cursor: pointer;
+}
+
+.ui-datepicker-next {
+	left: auto;
+	right: 0.75em;
+}
+
+.ui-datepicker-title {
+	font-weight: bold;
+	text-align: center;
+}
+
+.ui-datepicker-calendar {
+	width: 100%;
+
+	td {
+		padding: 0;
+		text-align: center;
+	}
+
+	th,
+	a {
+		padding: 0.5em 0.25em;
+		text-align: center;
+
+		@media(min-width: 767px) {
+			padding: 1em 0.5em;
+		}
+	}
+
+	tbody {
+
+		tr {
+			border-top: 1px solid;
+
+			&:first-child {
+				border-top: none;
+			}
+		}
+	}
+
+	a {
+		display: block;
+		line-height: 1em;
+		text-decoration: none;
+		opacity: 0.8;
+
+		&:hover,
+		&:focus {
+			opacity: 1;
+		}
+	}
+}
